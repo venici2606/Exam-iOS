@@ -8,11 +8,23 @@
 import UIKit
 
 class ContactDetailViewController: UIViewController {
+    
+    var contact: Contact? {
+        didSet {
+            updateViews()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
+    }
+    
+    func updateViews() {
+        guard isViewLoaded,
+              let contact = contact else { return }
+        title = contact.name.first?.capitalized
     }
     
 
