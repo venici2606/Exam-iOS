@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		959D4D03273685BE007E47D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D02273685BE007E47D4 /* AppDelegate.swift */; };
 		959D4D05273685BE007E47D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D04273685BE007E47D4 /* SceneDelegate.swift */; };
-		959D4D07273685BE007E47D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D06273685BE007E47D4 /* ViewController.swift */; };
 		959D4D0A273685BE007E47D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959D4D08273685BE007E47D4 /* Main.storyboard */; };
 		959D4D0D273685BE007E47D4 /* Exam_2054.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D0B273685BE007E47D4 /* Exam_2054.xcdatamodeld */; };
 		959D4D0F273685C1007E47D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959D4D0E273685C1007E47D4 /* Assets.xcassets */; };
 		959D4D12273685C1007E47D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959D4D10273685C1007E47D4 /* LaunchScreen.storyboard */; };
 		959D4D1D273685C2007E47D4 /* Exam_2054Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D1C273685C2007E47D4 /* Exam_2054Tests.swift */; };
 		959D4D28273685C2007E47D4 /* Exam_2054UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D27273685C2007E47D4 /* Exam_2054UITests.swift */; };
+		959D4D3927368875007E47D4 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D3827368875007E47D4 /* ContactDetailViewController.swift */; };
+		959D4D3C273688F2007E47D4 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D3B273688F2007E47D4 /* ContactsTableViewController.swift */; };
+		959D4D3E2736898C007E47D4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D3D2736898C007E47D4 /* Contact.swift */; };
+		959D4D4227368A2A007E47D4 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D4127368A2A007E47D4 /* APIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		959D4CFF273685BE007E47D4 /* Exam-2054.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exam-2054.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959D4D02273685BE007E47D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959D4D04273685BE007E47D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		959D4D06273685BE007E47D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		959D4D09273685BE007E47D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		959D4D0C273685BE007E47D4 /* Exam_2054.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Exam_2054.xcdatamodel; sourceTree = "<group>"; };
 		959D4D0E273685C1007E47D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		959D4D23273685C2007E47D4 /* Exam-2054UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Exam-2054UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959D4D27273685C2007E47D4 /* Exam_2054UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exam_2054UITests.swift; sourceTree = "<group>"; };
 		959D4D29273685C2007E47D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959D4D3827368875007E47D4 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		959D4D3B273688F2007E47D4 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		959D4D3D2736898C007E47D4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		959D4D4127368A2A007E47D4 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +107,16 @@
 		959D4D01273685BE007E47D4 /* Exam-2054 */ = {
 			isa = PBXGroup;
 			children = (
+				959D4D4027368A09007E47D4 /* Network */,
 				959D4D02273685BE007E47D4 /* AppDelegate.swift */,
 				959D4D04273685BE007E47D4 /* SceneDelegate.swift */,
-				959D4D06273685BE007E47D4 /* ViewController.swift */,
-				959D4D08273685BE007E47D4 /* Main.storyboard */,
+				959D4D3F2736899B007E47D4 /* Model */,
+				959D4D352736864E007E47D4 /* View */,
 				959D4D0E273685C1007E47D4 /* Assets.xcassets */,
 				959D4D10273685C1007E47D4 /* LaunchScreen.storyboard */,
 				959D4D13273685C2007E47D4 /* Info.plist */,
 				959D4D0B273685BE007E47D4 /* Exam_2054.xcdatamodeld */,
+				959D4D3A2736888D007E47D4 /* Controllers */,
 			);
 			path = "Exam-2054";
 			sourceTree = "<group>";
@@ -129,6 +137,39 @@
 				959D4D29273685C2007E47D4 /* Info.plist */,
 			);
 			path = "Exam-2054UITests";
+			sourceTree = "<group>";
+		};
+		959D4D352736864E007E47D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				959D4D08273685BE007E47D4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		959D4D3A2736888D007E47D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				959D4D3827368875007E47D4 /* ContactDetailViewController.swift */,
+				959D4D3B273688F2007E47D4 /* ContactsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		959D4D3F2736899B007E47D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				959D4D3D2736898C007E47D4 /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		959D4D4027368A09007E47D4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				959D4D4127368A2A007E47D4 /* APIController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959D4D07273685BE007E47D4 /* ViewController.swift in Sources */,
+				959D4D4227368A2A007E47D4 /* APIController.swift in Sources */,
+				959D4D3E2736898C007E47D4 /* Contact.swift in Sources */,
 				959D4D03273685BE007E47D4 /* AppDelegate.swift in Sources */,
+				959D4D3927368875007E47D4 /* ContactDetailViewController.swift in Sources */,
+				959D4D3C273688F2007E47D4 /* ContactsTableViewController.swift in Sources */,
 				959D4D05273685BE007E47D4 /* SceneDelegate.swift in Sources */,
 				959D4D0D273685BE007E47D4 /* Exam_2054.xcdatamodeld in Sources */,
 			);
@@ -441,6 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Exam-2054/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Exam-2054/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
