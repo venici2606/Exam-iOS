@@ -14,6 +14,11 @@ struct ContactsData: Decodable {
 struct Contact: Decodable {
     let name: Name
     let picture: Picture
+    //let date: Dob
+    //let age: Dob
+    let email: String
+    let phone: String
+    //let city: Location
 }
 
 struct ContactInfo: Decodable {
@@ -27,8 +32,8 @@ struct ContactInfo: Decodable {
 }
 
 struct Name: Decodable {
-    let first: String?
-    let last: String?
+    let first: String
+    let last: String
 }
 
 struct Picture: Decodable {

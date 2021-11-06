@@ -39,10 +39,14 @@ class ContactsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 
         let contact = apiController.contacts[indexPath.row]
-        cell.textLabel?.text = contact.name.first?.capitalized
-
+        
+        cell.textLabel?.text = contact.name.first.capitalized + " " + contact.name.last.capitalized
+        
+        //cell.imageView?.image = contact.picture.medium
+        
         return cell
     }
+    
     
 
     /*
@@ -53,17 +57,7 @@ class ContactsTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
