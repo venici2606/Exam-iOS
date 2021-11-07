@@ -57,7 +57,7 @@ struct Coordinates: Decodable {
 }
 
 struct Dob: Decodable {
-    var date: String?
-    var age: Int?
+    var date: String
+    var age: Int
 }
 

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <tabBar key="tableFooterView" contentMode="scaleToFill" id="3Gy-8Y-SwW">
-                            <rect key="frame" x="0.0" y="109.00000034679067" width="414" height="49"/>
+                            <rect key="frame" x="0.0" y="109" width="414" height="49"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <items>
@@ -73,12 +73,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9av-hm-7FL" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="257.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="klR-Uk-Urp">
-                                                <rect key="frame" x="112" y="52.5" width="190" height="152.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="190" id="lVt-em-TKt"/>
-                                                </constraints>
-                                            </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="0n8-ov-K6s">
                                                 <rect key="frame" x="42" y="218" width="330" height="21.5"/>
                                                 <subviews>
@@ -102,6 +96,12 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klR-Uk-Urp">
+                                                <rect key="frame" x="112" y="27" width="190" height="152.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="190" id="lVt-em-TKt"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="0n8-ov-K6s" firstAttribute="top" secondItem="9av-hm-7FL" secondAttribute="top" constant="218" id="7DO-1S-ZwQ"/>
@@ -287,11 +287,27 @@
                         <outlet property="imageView" destination="klR-Uk-Urp" id="fBI-yG-LWb"/>
                         <outlet property="lastLabel" destination="iFB-u2-HD2" id="IZ8-to-BMf"/>
                         <outlet property="phoneLabel" destination="q7O-YD-Ylz" id="3o6-cf-1an"/>
+                        <outlet property="viewOnMapBtn" destination="jbX-yw-qjQ" id="Gwg-BT-XNV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTZ-jB-4GT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1566.6666666666667" y="117.85714285714285"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="hIh-Xj-YAk">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="pyo-e2-IW5" customClass="MapViewController" customModule="Exam_2054" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cnv-ss-rTY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7ZC-fe-4hc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dz7-oW-VxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CYO-3h-5OH">

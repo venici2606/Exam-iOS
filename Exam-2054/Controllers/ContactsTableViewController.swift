@@ -22,6 +22,9 @@ class ContactsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        // VIEW ON MAP button
+        
 
         
     }
@@ -86,6 +89,9 @@ class ContactsTableViewController: UITableViewController {
             contactDetailVC.contact = contact
         }
     }
+    
+    
+   
     
 
 }

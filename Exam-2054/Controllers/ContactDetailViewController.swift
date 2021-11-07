@@ -19,6 +19,10 @@ class ContactDetailViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     
+
+    @IBOutlet weak var viewOnMapBtn: UIButton!
+    
+    
     
     var contact: Contact? {
         didSet {
@@ -30,6 +34,9 @@ class ContactDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        
+        viewOnMapBtn.addTarget(self, action: #selector(mapBtn), for: .touchUpInside)
+        
     }
     
     func updateViews() {
@@ -43,7 +50,7 @@ class ContactDetailViewController: UIViewController {
         lastLabel.text = contact.name.last.capitalized
         
         // dateLabel
-        // ageLabel
+        // ageLabel.text = String(contact.age.age) --> is not working!!!!
         
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
@@ -51,7 +58,13 @@ class ContactDetailViewController: UIViewController {
         // cityLabel
         
         
+    }
+    
+    @objc func mapBtn() {
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let controller = story.instantiateViewController(identifier: "MapViewController") as! MapViewController
         
+        self.present(controller, animated: true, completion: nil)
     }
     
 
