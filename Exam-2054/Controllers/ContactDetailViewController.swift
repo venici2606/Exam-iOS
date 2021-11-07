@@ -12,11 +12,12 @@ class ContactDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var firstLabel: UILabel!
-    
     @IBOutlet weak var lastLabel: UILabel!
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
     
     var contact: Contact? {
         didSet {
@@ -43,6 +44,7 @@ class ContactDetailViewController: UIViewController {
         
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
+        // cityLabel.text = contact.city.city.capitalized
         
         
         

@@ -26,8 +26,8 @@ struct ContactInfo: Decodable {
     var picture: Picture
     var date: Dob
     var age: Dob
-    var email: String?
-    var phone: String?
+    var email: String
+    var phone: String
     var city: Location
 }
 
@@ -43,16 +43,16 @@ struct Picture: Decodable {
 }
 
 struct Location: Decodable {
-    var street: String?
-    var city: String?
-    var state: String?
-    var postcode: Int?
+    var street: String
+    var city: String
+    var state: String
+    var postcode: Int
     var coordinates: Coordinates
 }
 
 struct Coordinates: Decodable {
-    var latitude: String?
-    var longitude: String?
+    var latitude: String
+    var longitude: String
 }
 
 struct Dob: Decodable {
