@@ -21,6 +21,7 @@ struct Contact: Decodable {
     //var city: Location
 }
 
+/*
 struct ContactInfo: Decodable {
     var name: Name
     var picture: Picture
@@ -29,7 +30,7 @@ struct ContactInfo: Decodable {
     var email: String
     var phone: String
     var city: Location
-}
+}*/
 
 struct Name: Decodable {
     var first: String

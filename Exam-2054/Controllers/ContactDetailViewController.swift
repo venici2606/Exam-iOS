@@ -10,10 +10,11 @@ import UIKit
 class ContactDetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var lastLabel: UILabel!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -38,13 +39,16 @@ class ContactDetailViewController: UIViewController {
         
         guard let imageData = try? Data(contentsOf: contact.picture.large) else { fatalError() }
         imageView.image = UIImage(data: imageData)
-        
         firstLabel.text = contact.name.first.capitalized
         lastLabel.text = contact.name.last.capitalized
         
+        // dateLabel
+        // ageLabel
+        
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
-        // cityLabel.text = contact.city.city.capitalized
+        
+        // cityLabel
         
         
         
