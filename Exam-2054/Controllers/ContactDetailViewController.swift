@@ -9,9 +9,12 @@ import UIKit
 
 class ContactDetailViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var firstLabel: UILabel!
+    
     @IBOutlet weak var lastLabel: UILabel!
-
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
@@ -32,8 +35,12 @@ class ContactDetailViewController: UIViewController {
               let contact = contact else { return }
         title = contact.name.first.capitalized + " " + contact.name.last.capitalized
         
+        guard let imageData = try? Data(contentsOf: contact.picture.large) else { fatalError() }
+        imageView.image = UIImage(data: imageData)
+        
         firstLabel.text = contact.name.first.capitalized
         lastLabel.text = contact.name.last.capitalized
+        
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
         

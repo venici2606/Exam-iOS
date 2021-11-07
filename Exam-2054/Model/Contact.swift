@@ -12,51 +12,51 @@ struct ContactsData: Decodable {
 }
 
 struct Contact: Decodable {
-    let name: Name
-    let picture: Picture
-    //let date: Dob
-    //let age: Dob
-    let email: String
-    let phone: String
-    //let city: Location
+    var name: Name
+    var picture: Picture
+    //var date: Dob
+    //var age: Dob
+    var email: String
+    var phone: String
+    //var city: Location
 }
 
 struct ContactInfo: Decodable {
-    let name: Name
-    let picture: Picture
-    let date: Dob
-    let age: Dob
-    let email: String?
-    let phone: String?
-    let city: Location
+    var name: Name
+    var picture: Picture
+    var date: Dob
+    var age: Dob
+    var email: String?
+    var phone: String?
+    var city: Location
 }
 
 struct Name: Decodable {
-    let first: String
-    let last: String
+    var first: String
+    var last: String
 }
 
 struct Picture: Decodable {
-    let large: String
-    let medium: String
-    let thumbnail: String
+    var large: URL
+    var medium: URL
+    var thumbnail: URL
 }
 
 struct Location: Decodable {
-    let street: String?
-    let city: String?
-    let state: String?
-    let postcode: Int?
-    let coordinates: Coordinates
+    var street: String?
+    var city: String?
+    var state: String?
+    var postcode: Int?
+    var coordinates: Coordinates
 }
 
 struct Coordinates: Decodable {
-    let latitude: String?
-    let longitude: String?
+    var latitude: String?
+    var longitude: String?
 }
 
 struct Dob: Decodable {
-    let date: String?
-    let age: Int?
+    var date: String?
+    var age: Int?
 }
 

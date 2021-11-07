@@ -42,7 +42,8 @@ class ContactsTableViewController: UITableViewController {
         
         cell.textLabel?.text = contact.name.first.capitalized + " " + contact.name.last.capitalized
         
-        //cell.imageView?.image = contact.picture.medium
+        guard let imageData = try? Data(contentsOf: contact.picture.medium) else { fatalError() }
+        cell.imageView?.image = UIImage(data: imageData)
         
         return cell
     }
