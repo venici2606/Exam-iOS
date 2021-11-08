@@ -14,23 +14,13 @@ struct ContactsData: Decodable {
 struct Contact: Decodable {
     var name: Name
     var picture: Picture
-    //var date: Dob
-    //var age: Dob
+    var dob: Dob
     var email: String
     var phone: String
-    //var city: Location
+    var location: Location
 }
 
-/*
-struct ContactInfo: Decodable {
-    var name: Name
-    var picture: Picture
-    var date: Dob
-    var age: Dob
-    var email: String
-    var phone: String
-    var city: Location
-}*/
+
 
 struct Name: Decodable {
     var first: String
@@ -44,10 +34,7 @@ struct Picture: Decodable {
 }
 
 struct Location: Decodable {
-    var street: String
     var city: String
-    var state: String
-    var postcode: Int
     var coordinates: Coordinates
 }
 

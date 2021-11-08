@@ -10,8 +10,9 @@ import UIKit
 class ContactDetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var firstLabel: UILabel!
-    @IBOutlet weak var lastLabel: UILabel!
+
+    @IBOutlet weak var fNameLabel: UILabel!
+    @IBOutlet weak var lNameLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -46,16 +47,16 @@ class ContactDetailViewController: UIViewController {
         
         guard let imageData = try? Data(contentsOf: contact.picture.large) else { fatalError() }
         imageView.image = UIImage(data: imageData)
-        firstLabel.text = contact.name.first.capitalized
-        lastLabel.text = contact.name.last.capitalized
+        fNameLabel.text = contact.name.first
         
-        // dateLabel
-        // ageLabel.text = String(contact.age.age) --> is not working!!!!
+        lNameLabel.text = contact.name.last
+        
+        dateLabel.text = contact.dob.date
+        ageLabel.text = String(contact.dob.age)
         
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
-        
-        // cityLabel
+        cityLabel.text = contact.location.city
         
         
     }
@@ -66,6 +67,7 @@ class ContactDetailViewController: UIViewController {
         
         self.present(controller, animated: true, completion: nil)
     }
+
     
 
     /*
