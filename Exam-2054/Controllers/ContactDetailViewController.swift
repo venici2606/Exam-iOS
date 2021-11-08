@@ -36,7 +36,6 @@ class ContactDetailViewController: UIViewController {
 
         updateViews()
         
-        viewOnMapBtn.addTarget(self, action: #selector(mapBtn), for: .touchUpInside)
         
     }
     

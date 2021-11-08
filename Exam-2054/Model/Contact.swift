@@ -12,6 +12,7 @@ struct ContactsData: Decodable {
 }
 
 struct Contact: Decodable {
+    //var id: ID
     var name: Name
     var picture: Picture
     var dob: Dob
@@ -20,7 +21,9 @@ struct Contact: Decodable {
     var location: Location
 }
 
-
+struct ID: Decodable {
+    var value: String
+}
 
 struct Name: Decodable {
     var first: String

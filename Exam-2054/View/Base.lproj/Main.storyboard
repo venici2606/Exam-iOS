@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="1120" y="-806"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="ApF-v2-kBH">
             <objects>
-                <viewController id="gax-75-EO6" sceneMemberID="viewController">
+                <viewController id="gax-75-EO6" customClass="MapViewController" customModule="Exam_2054" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGI-7a-rag">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,6 +328,9 @@
                                                         <rect key="frame" x="36" y="54" width="104" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="VIS PÅ KART"/>
+                                                        <connections>
+                                                            <segue destination="qJm-4w-Ho1" kind="show" id="iU9-uY-Qcp"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -359,12 +362,27 @@
                         <outlet property="imageView" destination="klR-Uk-Urp" id="fBI-yG-LWb"/>
                         <outlet property="lNameLabel" destination="KkP-JU-uNx" id="3ZE-65-I5u"/>
                         <outlet property="phoneLabel" destination="q7O-YD-Ylz" id="3o6-cf-1an"/>
-                        <outlet property="viewOnMapBtn" destination="jbX-yw-qjQ" id="Gwg-BT-XNV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTZ-jB-4GT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1909" y="25"/>
+        </scene>
+        <!--Contact Map View Controller-->
+        <scene sceneID="o0C-UQ-R4m">
+            <objects>
+                <viewController id="qJm-4w-Ho1" customClass="ContactMapViewController" customModule="Exam_2054" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M6M-7k-CJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5xw-Fa-H37"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2x5-8p-T4Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5R-P0-7Oy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715.9420289855075" y="24.776785714285712"/>
         </scene>
         <!--Kontakter-->
         <scene sceneID="CYO-3h-5OH">

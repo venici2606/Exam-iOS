@@ -20,6 +20,7 @@
 		959D4D3E2736898C007E47D4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D3D2736898C007E47D4 /* Contact.swift */; };
 		959D4D4227368A2A007E47D4 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D4127368A2A007E47D4 /* APIController.swift */; };
 		959D4D442738878C007E47D4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D432738878C007E47D4 /* MapViewController.swift */; };
+		959D4D4627394A42007E47D4 /* ContactMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D4527394A42007E47D4 /* ContactMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		959D4D3D2736898C007E47D4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		959D4D4127368A2A007E47D4 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		959D4D432738878C007E47D4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		959D4D4527394A42007E47D4 /* ContactMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				959D4D3827368875007E47D4 /* ContactDetailViewController.swift */,
 				959D4D3B273688F2007E47D4 /* ContactsTableViewController.swift */,
 				959D4D432738878C007E47D4 /* MapViewController.swift */,
+				959D4D4527394A42007E47D4 /* ContactMapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				959D4D3E2736898C007E47D4 /* Contact.swift in Sources */,
 				959D4D03273685BE007E47D4 /* AppDelegate.swift in Sources */,
 				959D4D3927368875007E47D4 /* ContactDetailViewController.swift in Sources */,
+				959D4D4627394A42007E47D4 /* ContactMapViewController.swift in Sources */,
 				959D4D3C273688F2007E47D4 /* ContactsTableViewController.swift in Sources */,
 				959D4D05273685BE007E47D4 /* SceneDelegate.swift in Sources */,
 				959D4D0D273685BE007E47D4 /* Exam_2054.xcdatamodeld in Sources */,
