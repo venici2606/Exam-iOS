@@ -11,8 +11,7 @@ import CoreLocation
 
 class ContactMapViewController: UIViewController, MKMapViewDelegate {
     
-    let apiController = APIController()
-    var contact = Contact.self
+    
     
     
     
@@ -27,8 +26,6 @@ class ContactMapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         view.addSubview(map)
         map.frame = view.bounds
         map.setRegion(MKCoordinateRegion(
