@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="Name" representedClassName="Name" syncable="YES" codeGenerationType="class">
+        <attribute name="first" optional="YES" attributeType="String"/>
+        <attribute name="last" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Name" positionX="-27" positionY="27" width="128" height="14"/>
+    </elements>
 </model>
