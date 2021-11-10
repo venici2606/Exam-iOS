@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Name" representedClassName="Name" syncable="YES" codeGenerationType="class">
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <relationship name="hasDob" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dob" inverseName="belongsToContact" inverseEntity="Dob"/>
+        <relationship name="hasLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="belongsToContact" inverseEntity="Location"/>
+        <relationship name="hasName" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Name" inverseName="belongsToContact" inverseEntity="Name"/>
+        <relationship name="hasPicture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Picture" inverseName="belongsToContact" inverseEntity="Picture"/>
+    </entity>
+    <entity name="Coordinates" representedClassName="Coordinates" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <relationship name="belongsToLoc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="hasCoordinates" inverseEntity="Location"/>
+    </entity>
+    <entity name="Dob" representedClassName="Dob" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <relationship name="belongsToContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="hasDob" inverseEntity="Contact"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="coordinates" optional="YES" attributeType="String"/>
+        <relationship name="belongsToContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="hasLocation" inverseEntity="Contact"/>
+        <relationship name="hasCoordinates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinates" inverseName="belongsToLoc" inverseEntity="Coordinates"/>
+    </entity>
+    <entity name="Name" representedClassName="Name" syncable="YES">
         <attribute name="first" optional="YES" attributeType="String"/>
         <attribute name="last" optional="YES" attributeType="String"/>
+        <relationship name="belongsToContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="hasName" inverseEntity="Contact"/>
+    </entity>
+    <entity name="Picture" representedClassName="Picture" syncable="YES">
+        <attribute name="large" optional="YES" attributeType="String"/>
+        <attribute name="medium" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <relationship name="belongsToContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="hasPicture" inverseEntity="Contact"/>
     </entity>
     <elements>
-        <element name="Name" positionX="-27" positionY="27" width="128" height="14"/>
+        <element name="Name" positionX="-27" positionY="27" width="128" height="74"/>
+        <element name="Picture" positionX="18" positionY="63" width="128" height="89"/>
+        <element name="Dob" positionX="54" positionY="126" width="128" height="74"/>
+        <element name="Location" positionX="18" positionY="90" width="128" height="89"/>
+        <element name="Coordinates" positionX="27" positionY="99" width="128" height="74"/>
+        <element name="Contact" positionX="36" positionY="108" width="128" height="119"/>
     </elements>
 </model>
