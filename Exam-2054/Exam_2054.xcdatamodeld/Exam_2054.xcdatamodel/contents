@@ -2,11 +2,17 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Contact" representedClassName="Contact" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
         <relationship name="hasDob" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dob" inverseName="belongsToContact" inverseEntity="Dob"/>
         <relationship name="hasLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="belongsToContact" inverseEntity="Location"/>
         <relationship name="hasName" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Name" inverseName="belongsToContact" inverseEntity="Name"/>
         <relationship name="hasPicture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Picture" inverseName="belongsToContact" inverseEntity="Picture"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="Coordinates" representedClassName="Coordinates" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="String"/>
@@ -36,11 +42,11 @@
         <relationship name="belongsToContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="hasPicture" inverseEntity="Contact"/>
     </entity>
     <elements>
-        <element name="Name" positionX="-27" positionY="27" width="128" height="74"/>
-        <element name="Picture" positionX="18" positionY="63" width="128" height="89"/>
+        <element name="Contact" positionX="36" positionY="108" width="128" height="134"/>
+        <element name="Coordinates" positionX="27" positionY="99" width="128" height="74"/>
         <element name="Dob" positionX="54" positionY="126" width="128" height="74"/>
         <element name="Location" positionX="18" positionY="90" width="128" height="89"/>
-        <element name="Coordinates" positionX="27" positionY="99" width="128" height="74"/>
-        <element name="Contact" positionX="36" positionY="108" width="128" height="119"/>
+        <element name="Name" positionX="-27" positionY="27" width="128" height="74"/>
+        <element name="Picture" positionX="18" positionY="63" width="128" height="89"/>
     </elements>
 </model>
