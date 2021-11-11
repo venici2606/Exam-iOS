@@ -44,7 +44,9 @@ class ContactDetailViewController: UIViewController {
         let contact = Contact(context: self.context)
         
         guard isViewLoaded,
-              let contact = contact else { return }
+              let contact = self.contact else { return }
+        
+        
         title = contact.first!.capitalized + " " + contact.last!.capitalized
         /*
         guard let imageData = try? Data(contentsOf: contact.large) else { fatalError() }

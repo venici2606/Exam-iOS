@@ -28,7 +28,7 @@ class APIController {
                     return
                 }
                 do {
-                    let newContacts = try JSONDecoder().decode(context, from: data)
+                    let newContacts = try JSONDecoder().decode(data, from: data)
                     print(newContacts)
                     self.contacts = newContacts.results
                 } catch {
