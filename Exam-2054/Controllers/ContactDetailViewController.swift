@@ -23,7 +23,7 @@ class ContactDetailViewController: UIViewController {
 
     @IBOutlet weak var viewOnMapBtn: UIButton!
     
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var contact: Contact? {
         didSet {
@@ -40,22 +40,26 @@ class ContactDetailViewController: UIViewController {
     }
     
     func updateViews() {
+        
+        let contact = Contact(context: self.context)
+        
         guard isViewLoaded,
               let contact = contact else { return }
-        title = contact.name.first.capitalized + " " + contact.name.last.capitalized
-        
-        guard let imageData = try? Data(contentsOf: contact.picture.large) else { fatalError() }
+        title = contact.first!.capitalized + " " + contact.last!.capitalized
+        /*
+        guard let imageData = try? Data(contentsOf: contact.large) else { fatalError() }
         imageView.image = UIImage(data: imageData)
-        fNameLabel.text = contact.name.first
+       */
+        fNameLabel.text = contact.first
         
-        lNameLabel.text = contact.name.last
+        lNameLabel.text = contact.last
         
-        dateLabel.text = contact.dob.date
-        ageLabel.text = String(contact.dob.age)
+        dateLabel.text = contact.date
+        ageLabel.text = String(contact.age)
         
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
-        cityLabel.text = contact.location.city
+        cityLabel.text = contact.city
         
         
     }

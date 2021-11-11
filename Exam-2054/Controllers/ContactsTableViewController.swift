@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ContactsTableViewController: UITableViewController {
 
     let apiController = APIController()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +43,15 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 
-        let contact = apiController.contacts[indexPath.row]
         
-        cell.textLabel?.text = contact.name.first.capitalized + " " + contact.name.last.capitalized
         
-        guard let imageData = try? Data(contentsOf: contact.picture.medium) else { fatalError() }
-        cell.imageView?.image = UIImage(data: imageData)
+        let contact = Contact(context: self.context)
         
+        cell.textLabel?.text = contact.first!.capitalized + " " + contact.last!.capitalized
+        /*
+        guard let imageData = try? Data(contentsOf: contact.medium) else { fatalError() }
+        cell.imageView?.image = UIImage(systemName: imageData)
+        */
         return cell
     }
     

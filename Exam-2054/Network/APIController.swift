@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 class APIController {
     
     var contacts: [Contact] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let baseURL = URL(string: "https://randomuser.me/api/?format=json&results=100")!
         typealias CompletionHandler = (Error?) -> Void
@@ -25,7 +28,7 @@ class APIController {
                     return
                 }
                 do {
-                    let newContacts = try JSONDecoder().decode(ContactsData.self, from: data)
+                    let newContacts = try JSONDecoder().decode(context, from: data)
                     print(newContacts)
                     self.contacts = newContacts.results
                 } catch {
