@@ -18,7 +18,7 @@ class APIController {
         typealias CompletionHandler = (Error?) -> Void
         
         func getContacts(completion: @escaping CompletionHandler = {_ in }) {
-            URLSession.shared.dataTask(with: baseURL) { (data, _, error) in
+            URLSession.shared.dataTask(with: baseURL) { [self] (data, _, error) in
                 if let error = error {
                     NSLog("Error getting contacts: \(error)")
                 }
@@ -28,9 +28,9 @@ class APIController {
                     return
                 }
                 do {
-                    let newContacts = try JSONDecoder().decode(data, from: data)
+                    let newContacts = context.self
                     print(newContacts)
-                    self.contacts = newContacts.results
+                    //self.contacts = newContacts.results
                 } catch {
                     NSLog("Error decoding contacts: \(error)")
                     completion(error)
