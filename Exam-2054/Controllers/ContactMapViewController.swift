@@ -11,10 +11,7 @@ import CoreLocation
 
 class ContactMapViewController: UIViewController, MKMapViewDelegate {
     
-    
-    
-    
-    
+    var contact: [Contact] = []
     let map = MKMapView()
     let coordinate = CLLocationCoordinate2D(
         latitude: 40.728,
@@ -53,6 +50,14 @@ class ContactMapViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard !(annotation is MKUserLocation) else {
+            
+            for contact in contact {
+                let coordinate = CLLocationCoordinate2D(
+                    latitude: Double(contact.location.coordinates.latitude)!,
+                    longitude: Double(contact.location.coordinates.longitude)!
+                )
+            }
+            
             return nil
         }
         
