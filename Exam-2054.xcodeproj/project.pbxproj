@@ -119,7 +119,6 @@
 				959D4D0E273685C1007E47D4 /* Assets.xcassets */,
 				959D4D10273685C1007E47D4 /* LaunchScreen.storyboard */,
 				959D4D13273685C2007E47D4 /* Info.plist */,
-				959D4D0B273685BE007E47D4 /* Exam_2054.xcdatamodeld */,
 				959D4D3A2736888D007E47D4 /* Controllers */,
 			);
 			path = "Exam-2054";
@@ -147,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				959D4D08273685BE007E47D4 /* Main.storyboard */,
+				959D4D0B273685BE007E47D4 /* Exam_2054.xcdatamodeld */,
 			);
 			path = View;
 			sourceTree = "<group>";
