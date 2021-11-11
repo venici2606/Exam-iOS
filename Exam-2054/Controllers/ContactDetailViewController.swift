@@ -50,7 +50,7 @@ class ContactDetailViewController: UIViewController {
         
         lNameLabel.text = contact.name.last
         
-        dateLabel.text = contact.dob.date
+        dateLabel.text = String(String(contact.dob.date).prefix(10))
         ageLabel.text = String(contact.dob.age)
         
         emailLabel.text = contact.email
