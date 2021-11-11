@@ -12,9 +12,6 @@ import CoreLocation
 class ContactMapViewController: UIViewController, MKMapViewDelegate {
     
     
-    
-    
-    
     let map = MKMapView()
     let coordinate = CLLocationCoordinate2D(
         latitude: 40.728,
