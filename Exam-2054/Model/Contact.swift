@@ -38,12 +38,12 @@ struct Picture: Decodable {
 
 struct Location: Decodable {
     var city: String
-    var coordinates: Coordinates
+    var coordinates: Coordinates?
 }
 
 struct Coordinates: Decodable {
-    var latitude: String
-    var longitude: String
+    var latitude: String?
+    var longitude: String?
 }
 
 struct Dob: Decodable {
