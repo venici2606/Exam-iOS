@@ -19,25 +19,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        
-        print(contacts)
 
         map.delegate = self
+        
         view.addSubview(map)
         map.frame = view.bounds
-
         
-        apiController.getContacts() { (error) in
+        
+        apiController.getContacts { (error) in
             if let error = error {
-                NSLog("Error getting contacts: \(error)")
+                NSLog("Error performing data task: \(error)")
             }
-            else {
+            DispatchQueue.main.async {
                 self.contacts = self.apiController.contacts
             }
-            
         }
         
         getContactsOnMap()
+        
+        print(contacts)
         
     }
     

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95888649273F2CC700E39410 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95888648273F2CC700E39410 /* MapViewController.swift */; };
+		9588864B273F3F9200E39410 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9588864A273F3F9100E39410 /* MapViewController.swift */; };
 		959D4D03273685BE007E47D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D02273685BE007E47D4 /* AppDelegate.swift */; };
 		959D4D05273685BE007E47D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D04273685BE007E47D4 /* SceneDelegate.swift */; };
 		959D4D0A273685BE007E47D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959D4D08273685BE007E47D4 /* Main.storyboard */; };
@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		95888648273F2CC700E39410 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9588864A273F3F9100E39410 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		959D4CFF273685BE007E47D4 /* Exam-2054.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exam-2054.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959D4D02273685BE007E47D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959D4D04273685BE007E47D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 				959D4D3827368875007E47D4 /* ContactDetailViewController.swift */,
 				959D4D3B273688F2007E47D4 /* ContactsTableViewController.swift */,
 				959D4D4527394A42007E47D4 /* ContactMapViewController.swift */,
-				95888648273F2CC700E39410 /* MapViewController.swift */,
+				9588864A273F3F9100E39410 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 				959D4D3E2736898C007E47D4 /* Contact.swift in Sources */,
 				959D4D03273685BE007E47D4 /* AppDelegate.swift in Sources */,
 				959D4D3927368875007E47D4 /* ContactDetailViewController.swift in Sources */,
-				95888649273F2CC700E39410 /* MapViewController.swift in Sources */,
+				9588864B273F3F9200E39410 /* MapViewController.swift in Sources */,
 				959D4D4627394A42007E47D4 /* ContactMapViewController.swift in Sources */,
 				959D4D3C273688F2007E47D4 /* ContactsTableViewController.swift in Sources */,
 				959D4D05273685BE007E47D4 /* SceneDelegate.swift in Sources */,

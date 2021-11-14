@@ -25,8 +25,6 @@ class ContactsTableViewController: UITableViewController {
         
         // VIEW ON MAP button
         
-
-        
     }
 
     // MARK: - Table view data source

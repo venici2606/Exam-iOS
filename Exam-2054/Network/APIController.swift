@@ -11,7 +11,7 @@ class APIController {
     
     var contacts: [Contact] = []
         
-        let baseURL = URL(string: "https://randomuser.me/api/?results=100")!
+        let baseURL = URL(string: "https://randomuser.me/api/?results=100&seed=ios&nat=no")!
         typealias CompletionHandler = (Error?) -> Void
         
         func getContacts(completion: @escaping CompletionHandler = {_ in }) {
