@@ -32,12 +32,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
             DispatchQueue.main.async {
                 self.contacts = self.apiController.contacts
+                self.getContactsOnMap()
             }
         }
-        
-        getContactsOnMap()
-        
-        print(contacts)
         
     }
     
@@ -45,6 +42,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         for contact in contacts {
             let pin = MKPointAnnotation()
             pin.title = contact.name.first
+            
             
             let coordinate = CLLocationCoordinate2D(latitude: Double(contact.location.coordinates?.latitude ?? "").self ?? 0.1, longitude: Double(contact.location.coordinates?.longitude ?? "").self ?? 0.1)
             
