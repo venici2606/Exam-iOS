@@ -25,7 +25,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         view.addSubview(map)
         map.frame = view.bounds
         
-        
         apiController.getContacts { (error) in
             if let error = error {
                 NSLog("Error performing data task: \(error)")
@@ -35,8 +34,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 self.getContactsOnMap()
             }
         }
-        
     }
+    
     
     func getContactsOnMap() {
         for contact in contacts {
@@ -46,10 +45,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             let coordinate = CLLocationCoordinate2D(latitude: Double(contact.location.coordinates?.latitude ?? "").self ?? 0.1, longitude: Double(contact.location.coordinates?.longitude ?? "").self ?? 0.1)
             
-            
             pin.coordinate = coordinate
             map.addAnnotation(pin)
-            
         }
     }
 
