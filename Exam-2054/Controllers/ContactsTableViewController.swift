@@ -6,23 +6,43 @@
 //
 
 import UIKit
+import CoreData
 
 class ContactsTableViewController: UITableViewController {
 
     let apiController = APIController()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var contactsArray: [ContactEntity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       if contactsArray.count == 0 {
         apiController.getContacts { (error) in
             if let error = error {
                 NSLog("Error performing data task: \(error)")
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                
             }
+
         }
+       }
+        let fetchRequest: NSFetchRequest<ContactEntity> = ContactEntity.fetchRequest()
+                do {
+                    contactsArray = try context.fetch(fetchRequest)
+                    
+                } catch {
+                    print(error)
+                }
+               print(contactsArray)
+       
+        
+        
+       
+        
+        
         
         // VIEW ON MAP button
         
@@ -30,13 +50,13 @@ class ContactsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-
+/*
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return apiController.contacts.count
-    }
+        return contactsArray.count
+    }*/
 
-    
+  /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 
@@ -50,7 +70,7 @@ class ContactsTableViewController: UITableViewController {
         cell.imageView?.image = UIImage(data: imageData)
         
         return cell
-    }
+    } */
     
     
 
@@ -83,7 +103,7 @@ class ContactsTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-
+/*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactDetail" {
             guard let contactDetailVC = segue.destination as? ContactDetailViewController else { return }
@@ -92,7 +112,7 @@ class ContactsTableViewController: UITableViewController {
             contactDetailVC.contact = contact
         }
     }
-    
+    */
     
    
     

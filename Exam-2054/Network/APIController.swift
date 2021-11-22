@@ -8,15 +8,19 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class APIController {
     
-    var contacts: [Contact] = []
+    //var contacts: [Contact] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let baseURL = URL(string: "https://randomuser.me/api/?results=100&seed=ios&nat=no")!
         typealias CompletionHandler = (Error?) -> Void
         
         func getContacts(completion: @escaping CompletionHandler = {_ in }) {
+            
+    
             URLSession.shared.dataTask(with: baseURL) { (data, _, error) in
                 if let error = error {
                     NSLog("Error getting contacts: \(error)")
@@ -29,7 +33,16 @@ class APIController {
                 do {
                     let newContacts = try JSONDecoder().decode(ContactsData.self, from: data)
                     //print(newContacts)
-                    self.contacts = newContacts.results
+                    for person in newContacts.results{
+                        let newPerson = ContactEntity(context: self.context)
+                        newPerson.age = Int64(person.dob.age)
+                        newPerson.first = person.name.first
+                        newPerson.last = person.name.last
+                    }
+                    
+                        try self.context.save()
+                    
+                    //self.contacts = newContacts.results
                 } catch {
                     NSLog("Error decoding contacts: \(error)")
                     completion(error)

@@ -21,8 +21,6 @@
 		959D4D4227368A2A007E47D4 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D4127368A2A007E47D4 /* APIController.swift */; };
 		959D4D4627394A42007E47D4 /* ContactMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D4527394A42007E47D4 /* ContactMapViewController.swift */; };
 		95EE30B3274C0F2800C7CF90 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30B2274C0F2800C7CF90 /* Contact.swift */; };
-		95EE30B6274C0FA400C7CF90 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30B4274C0FA400C7CF90 /* Contact+CoreDataClass.swift */; };
-		95EE30B7274C0FA400C7CF90 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30B5274C0FA400C7CF90 /* Contact+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +61,6 @@
 		959D4D4127368A2A007E47D4 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		959D4D4527394A42007E47D4 /* ContactMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMapViewController.swift; sourceTree = "<group>"; };
 		95EE30B2274C0F2800C7CF90 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		95EE30B4274C0FA400C7CF90 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95EE30B5274C0FA400C7CF90 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +173,6 @@
 		95EE30B1274C0F1100C7CF90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				95EE30B4274C0FA400C7CF90 /* Contact+CoreDataClass.swift */,
-				95EE30B5274C0FA400C7CF90 /* Contact+CoreDataProperties.swift */,
 				95EE30B2274C0F2800C7CF90 /* Contact.swift */,
 			);
 			path = Model;
@@ -318,9 +312,7 @@
 				959D4D4227368A2A007E47D4 /* APIController.swift in Sources */,
 				959D4D03273685BE007E47D4 /* AppDelegate.swift in Sources */,
 				959D4D3927368875007E47D4 /* ContactDetailViewController.swift in Sources */,
-				95EE30B6274C0FA400C7CF90 /* Contact+CoreDataClass.swift in Sources */,
 				9588864B273F3F9200E39410 /* MapViewController.swift in Sources */,
-				95EE30B7274C0FA400C7CF90 /* Contact+CoreDataProperties.swift in Sources */,
 				959D4D4627394A42007E47D4 /* ContactMapViewController.swift in Sources */,
 				959D4D3C273688F2007E47D4 /* ContactsTableViewController.swift in Sources */,
 				959D4D05273685BE007E47D4 /* SceneDelegate.swift in Sources */,
