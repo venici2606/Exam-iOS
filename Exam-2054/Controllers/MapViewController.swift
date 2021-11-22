@@ -43,6 +43,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             pin.title = contact.name.first
             
             
+            
             let coordinate = CLLocationCoordinate2D(latitude: Double(contact.location.coordinates?.latitude ?? "").self ?? 0.1, longitude: Double(contact.location.coordinates?.longitude ?? "").self ?? 0.1)
             
             pin.coordinate = coordinate

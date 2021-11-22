@@ -60,6 +60,10 @@ class ContactDetailViewController: UIViewController {
         
     }
     
+    func birthday() {
+       
+    }
+    
     @objc func mapBtn() {
         let story = UIStoryboard(name: "Main", bundle: nil)
         let controller = story.instantiateViewController(identifier: "MapViewController") as! MapViewController
