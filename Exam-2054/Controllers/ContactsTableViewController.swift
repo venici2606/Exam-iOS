@@ -7,23 +7,25 @@
 
 import UIKit
 import CoreData
+import SwiftUI
 
 class ContactsTableViewController: UITableViewController {
+    
 
-    let apiController = APIController()
+    @StateObject var jsonModel = JSONViewModel()
+    //let apiController = APIController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        apiController.getContacts { (error) in
-            if let error = error {
-                NSLog("Error performing data task: \(error)")
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        if jsonModel.contacts.isEmpty{
+            ProgressView()
+        } else {
+            List(jsonModel.contacts,id: \.self) { contact in
+                
+                
             }
         }
-        
         // VIEW ON MAP button
         
     }

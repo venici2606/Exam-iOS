@@ -23,6 +23,7 @@
 		95EE30A6274BA7F100C7CF90 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30A4274BA7F100C7CF90 /* Contact+CoreDataClass.swift */; };
 		95EE30A7274BA7F100C7CF90 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30A5274BA7F100C7CF90 /* Contact+CoreDataProperties.swift */; };
 		95EE30A9274BCC5000C7CF90 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30A8274BCC5000C7CF90 /* Contact.swift */; };
+		95EE30AC274BD9BE00C7CF90 /* JSONViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30AB274BD9BE00C7CF90 /* JSONViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		95EE30A4274BA7F100C7CF90 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		95EE30A5274BA7F100C7CF90 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95EE30A8274BCC5000C7CF90 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../../../../.Trash/Contact.swift; sourceTree = "<group>"; };
+		95EE30AB274BD9BE00C7CF90 /* JSONViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				959D4D02273685BE007E47D4 /* AppDelegate.swift */,
 				959D4D04273685BE007E47D4 /* SceneDelegate.swift */,
 				959D4D3F2736899B007E47D4 /* Model */,
+				95EE30AA274BD99100C7CF90 /* ViewModel */,
 				959D4D352736864E007E47D4 /* View */,
 				959D4D0E273685C1007E47D4 /* Assets.xcassets */,
 				959D4D10273685C1007E47D4 /* LaunchScreen.storyboard */,
@@ -182,6 +185,14 @@
 				959D4D4127368A2A007E47D4 /* APIController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		95EE30AA274BD99100C7CF90 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95EE30AB274BD9BE00C7CF90 /* JSONViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				95EE30A7274BA7F100C7CF90 /* Contact+CoreDataProperties.swift in Sources */,
 				95EE30A9274BCC5000C7CF90 /* Contact.swift in Sources */,
 				959D4D4627394A42007E47D4 /* ContactMapViewController.swift in Sources */,
+				95EE30AC274BD9BE00C7CF90 /* JSONViewModel.swift in Sources */,
 				959D4D3C273688F2007E47D4 /* ContactsTableViewController.swift in Sources */,
 				959D4D05273685BE007E47D4 /* SceneDelegate.swift in Sources */,
 				959D4D0D273685BE007E47D4 /* Exam_2054.xcdatamodeld in Sources */,
