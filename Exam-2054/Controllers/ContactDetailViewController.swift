@@ -23,9 +23,10 @@ class ContactDetailViewController: UIViewController {
 
     @IBOutlet weak var viewOnMapBtn: UIButton!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var contactsArray: [ContactEntity] = []
     
-    
-    var contact: Contact? {
+    var contact: ContactEntity? {
         didSet {
             updateViews()
         }
@@ -41,21 +42,34 @@ class ContactDetailViewController: UIViewController {
     
     func updateViews() {
         guard isViewLoaded,
+              //let contact = context else {return}
               let contact = contact else { return }
-        title = contact.name.first.capitalized + " " + contact.name.last.capitalized
+        //title = contact.name.first.capitalized + " " + contact.name.last.capitalized
+        title = contact.first!.capitalized + " " + contact.last!.capitalized
+                
+        //guard let imageData = try? Data(contentsOf: contact.picture.large) else { fatalError() }
+        //imageView.image = UIImage(data: imageData)
         
-        guard let imageData = try? Data(contentsOf: contact.picture.large) else { fatalError() }
-        imageView.image = UIImage(data: imageData)
-        fNameLabel.text = contact.name.first
+        //fNameLabel.text = contact.name.first
+        fNameLabel.text = contact.first
         
-        lNameLabel.text = contact.name.last
+        //lNameLabel.text = contact.name.last
+        lNameLabel.text = contact.last
         
-        dateLabel.text = String(String(contact.dob.date).prefix(10))
-        ageLabel.text = String(contact.dob.age)
+        //dateLabel.text = String(String(contact.dob.date).prefix(10))
+        //ageLabel.text = String(contact.dob.age)
+        
+        //dateLabel.text = String(String(contact.date).prefix(10))
+        ageLabel.text = String(contact.age)
+        
+        /*
+        emailLabel.text = contact.email
+        phoneLabel.text = contact.phone
+        cityLabel.text = contact.location.city */
         
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
-        cityLabel.text = contact.location.city
+        cityLabel.text = contact.city
         
         
     }
