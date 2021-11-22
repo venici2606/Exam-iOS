@@ -30,7 +30,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 NSLog("Error performing data task: \(error)")
             }
             DispatchQueue.main.async {
-                //self.contacts = self.apiController.contacts
+                //self.contacts = self.apiController.contacts MÅ HA MED
                 self.getContactsOnMap()
             }
         }

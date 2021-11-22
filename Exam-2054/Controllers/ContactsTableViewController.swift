@@ -50,13 +50,13 @@ class ContactsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-/*
+/* MÅ HA MED
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return contactsArray.count
     }*/
 
-  /*
+  /* MÅ HA MED
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 
@@ -103,7 +103,7 @@ class ContactsTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-/*
+/* MÅ HA MED
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactDetail" {
             guard let contactDetailVC = segue.destination as? ContactDetailViewController else { return }

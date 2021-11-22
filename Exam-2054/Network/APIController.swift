@@ -35,9 +35,19 @@ class APIController {
                     //print(newContacts)
                     for person in newContacts.results{
                         let newPerson = ContactEntity(context: self.context)
-                        newPerson.age = Int64(person.dob.age)
                         newPerson.first = person.name.first
                         newPerson.last = person.name.last
+                        //newPerson.large = URL(person.picture.large)
+                        //newPerson.medium = URL(person.picture.medium)
+                        //newPerson.thumbnail = URL(person.picture.thumbnail)
+                        newPerson.date = person.dob.date
+                        newPerson.age = Int64(person.dob.age)
+                        newPerson.email = person.email
+                        newPerson.phone = person.phone
+                        newPerson.city = person.location.city
+                        newPerson.latitude = person.location.coordinates?.latitude
+                        newPerson.longitude = person.location.coordinates?.longitude
+                        
                     }
                     
                         try self.context.save()

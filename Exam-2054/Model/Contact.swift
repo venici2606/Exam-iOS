@@ -20,10 +20,11 @@ struct Contact: Codable {
     let phone: String
     var location: Location
 }
-
+/*
 struct ID: Codable {
     var value: String
 }
+ */
 
 struct Name: Codable {
     var first: String

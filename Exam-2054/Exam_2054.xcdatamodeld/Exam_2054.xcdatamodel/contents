@@ -6,7 +6,6 @@
         <attribute name="date" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="first" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="large" optional="YES" attributeType="String"/>
         <attribute name="last" attributeType="String"/>
         <attribute name="latitude" optional="YES" attributeType="String"/>
@@ -16,6 +15,6 @@
         <attribute name="thumbnail" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ContactEntity" positionX="-63" positionY="-18" width="128" height="224"/>
+        <element name="ContactEntity" positionX="-63" positionY="-18" width="128" height="209"/>
     </elements>
 </model>
