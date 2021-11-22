@@ -23,6 +23,7 @@ class ContactsTableViewController: UITableViewController {
                 self.tableView.reloadData()
                 self.saveData()
                 self.loadData()
+                print("Directory: \(NSHomeDirectory())")
             }
         }
         
