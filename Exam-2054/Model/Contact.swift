@@ -7,46 +7,46 @@
 
 import Foundation
 
-struct ContactsData: Decodable {
+struct ContactsData: Codable {
     let results: [Contact]
 }
 
-struct Contact: Decodable {
-    //var id: ID
+struct Contact: Codable {
+    //let id: ID
     var name: Name
     var picture: Picture
     var dob: Dob
-    var email: String
-    var phone: String
+    let email: String
+    let phone: String
     var location: Location
 }
 
-struct ID: Decodable {
+struct ID: Codable {
     var value: String
 }
 
-struct Name: Decodable {
+struct Name: Codable {
     var first: String
     var last: String
 }
 
-struct Picture: Decodable {
+struct Picture: Codable {
     var large: URL
     var medium: URL
     var thumbnail: URL
 }
 
-struct Location: Decodable {
+struct Location: Codable {
     var city: String
     var coordinates: Coordinates?
 }
 
-struct Coordinates: Decodable {
+struct Coordinates: Codable {
     var latitude: String?
     var longitude: String?
 }
 
-struct Dob: Decodable {
+struct Dob: Codable {
     var date: String
     var age: Int
 }

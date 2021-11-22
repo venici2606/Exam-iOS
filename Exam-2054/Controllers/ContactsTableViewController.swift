@@ -10,6 +10,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 
     let apiController = APIController()
+    var contacts: [Contact] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class ContactsTableViewController: UITableViewController {
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.saveData()
+                self.loadData()
             }
         }
         
@@ -31,7 +34,6 @@ class ContactsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return apiController.contacts.count
     }
 
@@ -46,7 +48,38 @@ class ContactsTableViewController: UITableViewController {
         guard let imageData = try? Data(contentsOf: contact.picture.medium) else { fatalError() }
         cell.imageView?.image = UIImage(data: imageData)
         
+        
         return cell
+    }
+    
+    func loadData() {
+        let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        let documentURL = directoryURL.appendingPathComponent("contacts").appendingPathExtension("json")
+         
+        guard let data = try? Data(contentsOf: documentURL) else { return }
+        let jsonDecoder = JSONDecoder()
+        do{
+            contacts = try jsonDecoder.decode(Array<Contact>.self, from: data)
+            tableView.reloadData()
+        } catch {
+            print("ERROR: Could not load  data! \(error.localizedDescription)")
+        }
+    }
+    
+    // saves data using FileManager
+    func saveData() {
+        let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        let documentURL = directoryURL.appendingPathComponent("contacts").appendingPathExtension("json")
+        
+        let jsonEncoder = JSONEncoder()
+        let data = try? jsonEncoder.encode(contacts)
+        do{
+            try data?.write(to: documentURL, options: .noFileProtection)
+        } catch{
+            print("ERROR: Could not save data! \(error.localizedDescription)")
+        }
     }
     
     
