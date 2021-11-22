@@ -10,6 +10,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 
     let apiController = APIController()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,8 @@ class ContactsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 
         let contact = apiController.contacts[indexPath.row]
+        
+        //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         cell.textLabel?.text = contact.name.first.capitalized + " " + contact.name.last.capitalized
         
@@ -75,6 +78,8 @@ class ContactsTableViewController: UITableViewController {
         return true
     }
     */
+    
+    
 
     
     // MARK: - Navigation
