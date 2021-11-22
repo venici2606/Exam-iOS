@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class ContactMapViewController: UIViewController, MKMapViewDelegate {
     
