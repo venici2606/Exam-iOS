@@ -20,7 +20,7 @@
 		959D4D3C273688F2007E47D4 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D3B273688F2007E47D4 /* ContactsTableViewController.swift */; };
 		959D4D4227368A2A007E47D4 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D4127368A2A007E47D4 /* APIController.swift */; };
 		959D4D4627394A42007E47D4 /* ContactMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D4D4527394A42007E47D4 /* ContactMapViewController.swift */; };
-		95EE30AE274BEAA300C7CF90 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30AD274BEAA300C7CF90 /* Contact.swift */; };
+		95EE30B3274C0F2800C7CF90 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE30B2274C0F2800C7CF90 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		959D4D3B273688F2007E47D4 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		959D4D4127368A2A007E47D4 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		959D4D4527394A42007E47D4 /* ContactMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMapViewController.swift; sourceTree = "<group>"; };
-		95EE30AD274BEAA300C7CF90 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../../../../.Trash/Contact.swift; sourceTree = "<group>"; };
+		95EE30B2274C0F2800C7CF90 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				959D4D4027368A09007E47D4 /* Network */,
 				959D4D02273685BE007E47D4 /* AppDelegate.swift */,
 				959D4D04273685BE007E47D4 /* SceneDelegate.swift */,
-				959D4D3F2736899B007E47D4 /* Model */,
+				95EE30B1274C0F1100C7CF90 /* Model */,
 				959D4D352736864E007E47D4 /* View */,
 				959D4D0E273685C1007E47D4 /* Assets.xcassets */,
 				959D4D10273685C1007E47D4 /* LaunchScreen.storyboard */,
@@ -162,20 +162,20 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		959D4D3F2736899B007E47D4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				95EE30AD274BEAA300C7CF90 /* Contact.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		959D4D4027368A09007E47D4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				959D4D4127368A2A007E47D4 /* APIController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		95EE30B1274C0F1100C7CF90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95EE30B2274C0F2800C7CF90 /* Contact.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95EE30AE274BEAA300C7CF90 /* Contact.swift in Sources */,
+				95EE30B3274C0F2800C7CF90 /* Contact.swift in Sources */,
 				959D4D4227368A2A007E47D4 /* APIController.swift in Sources */,
 				959D4D03273685BE007E47D4 /* AppDelegate.swift in Sources */,
 				959D4D3927368875007E47D4 /* ContactDetailViewController.swift in Sources */,
