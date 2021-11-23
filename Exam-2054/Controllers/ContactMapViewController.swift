@@ -14,8 +14,8 @@ class ContactMapViewController: UIViewController, MKMapViewDelegate {
     
     let map = MKMapView()
     let coordinate = CLLocationCoordinate2D(
-        latitude: 40.728,
-        longitude: -74
+        latitude: 59.911491,
+        longitude: 10.757933
     ) // contact.location.lat ...?
     
 
