@@ -50,5 +50,31 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             map.addAnnotation(pin)
         }
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        var annotationView = map.dequeueReusableAnnotationView(withIdentifier: "custom")
+        
+        if annotationView == nil {
+            // Create the view
+            annotationView = MKAnnotationView(annotation: annotation,
+                                              reuseIdentifier: "custom")
+            annotationView?.canShowCallout = true // tapping on the point
+            
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        let imageData = try! Data(contentsOf: (contacts.removeFirst().picture.thumbnail))
+        annotationView?.image = UIImage(data: imageData)
+        
+        //annotationView?.image = UIImage(named: "user")
+        
+        return annotationView
+        
+    }
 
 }
