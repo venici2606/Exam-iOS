@@ -12,7 +12,8 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     let apiController = APIController()
-    var contacts: [Contact] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var contactsArray: [ContactEntity] = []
     let map = MKMapView()
 
 
@@ -30,7 +31,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 NSLog("Error performing data task: \(error)")
             }
             DispatchQueue.main.async {
-                //self.contacts = self.apiController.contacts MÅ HA MED
+                self.contactsArray = self.apiController.contactsArray
                 self.getContactsOnMap()
             }
         }
@@ -38,15 +39,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     
     func getContactsOnMap() {
-        for contact in contacts {
+        for contact in contactsArray {
             let pin = MKPointAnnotation()
-            pin.title = contact.name.first
+            pin.title = contact.first
             
             
-            let coordinate = CLLocationCoordinate2D(latitude: Double(contact.location.coordinates?.latitude ?? "").self ?? 0.1, longitude: Double(contact.location.coordinates?.longitude ?? "").self ?? 0.1)
+            let coordinate = CLLocationCoordinate2D(latitude: Double(contact.latitude ?? "").self ?? 0.1, longitude: Double(contact.longitude ?? "").self ?? 0.1)
             
             pin.coordinate = coordinate
             map.addAnnotation(pin)
+            print(coordinate)
         }
     }
 
