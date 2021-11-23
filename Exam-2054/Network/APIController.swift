@@ -14,7 +14,8 @@ class APIController {
     
     //var contacts: [Contact] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
+    var contactsArray: [ContactEntity] = []
+    
         let baseURL = URL(string: "https://randomuser.me/api/?results=100&seed=ios&nat=no")!
         typealias CompletionHandler = (Error?) -> Void
         
@@ -49,6 +50,20 @@ class APIController {
                         newPerson.longitude = person.location.coordinates?.longitude
                         
                     }
+                    
+                    // READ DATA
+                    func updatePersons() {
+                        let request: NSFetchRequest<ContactEntity> = ContactEntity.fetchRequest()
+                        do{
+                            self.contactsArray = try self.context.fetch(request)
+                        } catch {
+                            print("Error fetching data from context \(error)")
+                        }
+                    }
+                    
+
+                    
+                    
                     
                         try self.context.save()
                     

@@ -39,7 +39,6 @@ class ContactsTableViewController: UITableViewController {
                print(contactsArray)
        
         
-        
        
         
         

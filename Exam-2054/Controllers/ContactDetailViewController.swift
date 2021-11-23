@@ -74,6 +74,10 @@ class ContactDetailViewController: UIViewController {
         
     }
     
+    // DELETE
+    context.delete(contactsArray[indexPath.row])
+    contactsArray.remove(at: indexPath.row)
+    
     @objc func mapBtn() {
         let story = UIStoryboard(name: "Main", bundle: nil)
         let controller = story.instantiateViewController(identifier: "MapViewController") as! MapViewController
