@@ -64,9 +64,8 @@ class ContactDetailViewController: UIViewController {
     
     
     func contactBirthday() {
-        let birthday = contact?.dob.date
-        
-        
+        let birthday = contact?.dob.date.prefix(10)
+
         var currentDate = Date()
         
         let dateFormatter = DateFormatter()
@@ -75,8 +74,8 @@ class ContactDetailViewController: UIViewController {
         print("Todays date: " + dateFormatter.string(from: currentDate))
         print("Persons birthday: " + birthday!)
         
-        let sparklingHeart = "💖"
-
+        let birthdayCake = "🎂" // "\u{1F382}"
+        
     }
     
     @objc func mapBtn() {
