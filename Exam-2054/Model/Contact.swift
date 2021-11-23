@@ -12,12 +12,12 @@ struct ContactsData: Codable {
 }
 
 struct Contact: Codable {
-    //var id: ID
+    //let id: ID
     var name: Name
     var picture: Picture
     var dob: Dob
-    var email: String
-    var phone: String
+    let email: String
+    let phone: String
     var location: Location
 }
 
