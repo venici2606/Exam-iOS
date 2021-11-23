@@ -8,9 +8,12 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class ContactMapViewController: UIViewController, MKMapViewDelegate {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var contactsArray: [ContactEntity] = []
     
     let map = MKMapView()
     let coordinate = CLLocationCoordinate2D(
@@ -37,6 +40,15 @@ class ContactMapViewController: UIViewController, MKMapViewDelegate {
         map.delegate = self
         
         addCustomPin()
+        
+        let fetchRequest: NSFetchRequest<ContactEntity> = ContactEntity.fetchRequest()
+            do {
+                contactsArray = try context.fetch(fetchRequest)
+                
+            } catch {
+                print(error)
+            }
+        
     }
     
     private func addCustomPin() {

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
@@ -25,7 +26,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         view.addSubview(map)
         map.frame = view.bounds
-        
+    
         apiController.getContacts { (error) in
             if let error = error {
                 NSLog("Error performing data task: \(error)")
