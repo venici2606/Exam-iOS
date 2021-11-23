@@ -82,6 +82,8 @@ class ContactDetailViewController: UIViewController {
         
         //let birthdayCake = "🎂" // "\u{1F382}"
         
+        
+        
         if dateFormatter.string(from: currentDate) == formattedBDay {
             print("BIRTHDAY!!!")
             birthdayEmoji.alpha = 1

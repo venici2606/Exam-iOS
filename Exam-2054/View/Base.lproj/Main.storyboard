@@ -86,21 +86,36 @@
             </objects>
             <point key="canvasLocation" x="1119" y="-1579"/>
         </scene>
-        <!--View Controller-->
+        <!--Instillinger-->
         <scene sceneID="oQj-nt-QxO">
             <objects>
                 <viewController id="ii8-CV-hnR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GPb-rD-JQC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" fixedFrame="YES" text="api-seed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S0-1y-Rn7">
+                                <rect key="frame" x="37" y="156" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ios" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9e-Ew-4Q0">
+                                <rect key="frame" x="194" y="149" width="150" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j6a-3i-HtM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7Lx-Sz-6un"/>
+                    <navigationItem key="navigationItem" title="Instillinger" id="JPK-6f-Pa5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8x-Ho-g0k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296" y="-1579"/>
+            <point key="canvasLocation" x="2295.6521739130435" y="-1579.0178571428571"/>
         </scene>
         <!--Kart-->
         <scene sceneID="Cjc-K2-WnD">
@@ -119,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1120" y="-806"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Kart-->
         <scene sceneID="ApF-v2-kBH">
             <objects>
                 <viewController id="gax-75-EO6" customClass="MapViewController" customModule="Exam_2054" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +144,7 @@
                         <viewLayoutGuide key="safeArea" id="gcf-ZX-0gd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Ll-Vd-Dqp"/>
+                    <navigationItem key="navigationItem" title="Kart" id="kYA-dO-bb7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIf-Pb-cGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
