@@ -69,11 +69,14 @@ class ContactDetailViewController: UIViewController {
         let contactBirthday = contact!.dob.date.prefix(10)
         let formattedBDay = contactBirthday.suffix(5)
 
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM"
+        // FORMATTING CONTACTS BIRTH DATE
+        //let formatter = DateFormatter()
+        //formatter.dateFormat = "MM-dd"
+        
             
         let currentDate = Date()
         
+        // TODAYS DATE
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd"
         
@@ -85,7 +88,7 @@ class ContactDetailViewController: UIViewController {
         
         
         if dateFormatter.string(from: currentDate) == formattedBDay {
-            print("BIRTHDAY!!!")
+            print("It's \(contact?.name.first) BIRTHDAY!!!")
             birthdayEmoji.alpha = 1
         }
         
