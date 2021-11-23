@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Exam-2054
 //
-//  Created by Venicia Punithan on 06/11/2021.
+//  Created by Candidate 2054
 //
 
 import UIKit
