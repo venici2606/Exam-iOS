@@ -32,9 +32,9 @@ struct Name: Codable {
 }
 
 struct Picture: Codable {
-    var large: URL
-    var medium: URL
-    var thumbnail: URL
+    var large: String
+    var medium: String
+    var thumbnail: String
 }
 
 struct Location: Codable {

@@ -17,6 +17,9 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+             print(urls[urls.count-1] as URL)
+        
        if contactsArray.count == 0 {
         apiController.getContacts { (error) in
             if let error = error {
@@ -30,18 +33,12 @@ class ContactsTableViewController: UITableViewController {
         }
        }
         let fetchRequest: NSFetchRequest<ContactEntity> = ContactEntity.fetchRequest()
-                do {
-                    contactsArray = try context.fetch(fetchRequest)
-                    
-                } catch {
-                    print(error)
-                }
-               print(contactsArray)
-       
-        
-       
-        
-        
+            do {
+                contactsArray = try context.fetch(fetchRequest)
+                tableView.reloadData()
+            } catch {
+                print(error)
+            }
         
         // VIEW ON MAP button
         
@@ -49,27 +46,29 @@ class ContactsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-/* MÅ HA MED
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(contactsArray.count > 0){
+            return contactsArray.count
+        }
         
-        return contactsArray.count
-    }*/
+        return 0
+    }
 
-    /* MÅ HA MED
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 
-        let contact = apiController.contacts[indexPath.row]
+        let contact = contactsArray[indexPath.row]
         
         //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        cell.textLabel?.text = contact.name.first.capitalized + " " + contact.name.last.capitalized
+        cell.textLabel?.text = contact.first!.capitalized + " " + contact.last!.capitalized
         
-        guard let imageData = try? Data(contentsOf: contact.picture.medium) else { fatalError() }
+        let urlFromString = URL(string: contact.medium!)
+        guard let imageData = try? Data(contentsOf: urlFromString!) else { fatalError() }
         cell.imageView?.image = UIImage(data: imageData)
         
         return cell
-    } */
+    }
     
     
 

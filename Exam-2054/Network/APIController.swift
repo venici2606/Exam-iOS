@@ -38,9 +38,9 @@ class APIController {
                         let newPerson = ContactEntity(context: self.context)
                         newPerson.first = person.name.first
                         newPerson.last = person.name.last
-                        //newPerson.large = URL(person.picture.large)
-                        //newPerson.medium = URL(person.picture.medium)
-                        //newPerson.thumbnail = URL(person.picture.thumbnail)
+                        newPerson.large = person.picture.large
+                        newPerson.medium = person.picture.medium
+                        newPerson.thumbnail = person.picture.thumbnail
                         newPerson.date = person.dob.date
                         newPerson.age = Int64(person.dob.age)
                         newPerson.email = person.email
@@ -51,22 +51,8 @@ class APIController {
                         
                     }
                     
-                    // READ DATA
-                    func updatePersons() {
-                        let request: NSFetchRequest<ContactEntity> = ContactEntity.fetchRequest()
-                        do{
-                            self.contactsArray = try self.context.fetch(request)
-                        } catch {
-                            print("Error fetching data from context \(error)")
-                        }
-                    }
-                    
-
-                    
-                    
-                    
-                        try self.context.save()
-                    
+                    self.deleteContext()
+                    try self.context.save()
                     //self.contacts = newContacts.results
                 } catch {
                     NSLog("Error decoding contacts: \(error)")
@@ -75,6 +61,15 @@ class APIController {
                 completion(nil)
             }.resume()
         }
+    func deleteContext() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "ContactEntity")
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            do {
+                try context.execute(deleteRequest)
+            } catch let error as NSError {
+                print(error)
+            }
+    }
     
 }
  
