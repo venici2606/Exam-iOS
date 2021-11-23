@@ -46,26 +46,20 @@ class ContactDetailViewController: UIViewController {
               let contact = contact else { return }
         //title = contact.name.first.capitalized + " " + contact.name.last.capitalized
         title = contact.first!.capitalized + " " + contact.last!.capitalized
-                
-        //guard let imageData = try? Data(contentsOf: contact.picture.large) else { fatalError() }
-        //imageView.image = UIImage(data: imageData)
         
-        //fNameLabel.text = contact.name.first
+        
+        let urlFromString = URL(string: contact.large!)
+        guard let imageData = try? Data(contentsOf: urlFromString!) else { fatalError() }
+        imageView.image = UIImage(data: imageData)
+        
         fNameLabel.text = contact.first
-        
-        //lNameLabel.text = contact.name.last
         lNameLabel.text = contact.last
         
-        //dateLabel.text = String(String(contact.dob.date).prefix(10))
-        //ageLabel.text = String(contact.dob.age)
-        
         //dateLabel.text = String(String(contact.date).prefix(10))
+        dateLabel.text = contact.date
+        
         ageLabel.text = String(contact.age)
         
-        /*
-        emailLabel.text = contact.email
-        phoneLabel.text = contact.phone
-        cityLabel.text = contact.location.city */
         
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone

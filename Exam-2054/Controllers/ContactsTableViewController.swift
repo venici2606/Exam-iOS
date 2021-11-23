@@ -101,16 +101,16 @@ class ContactsTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-/* MÅ HA MED
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactDetail" {
             guard let contactDetailVC = segue.destination as? ContactDetailViewController else { return }
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let contact = apiController.contacts[indexPath.row]
+            let contact = contactsArray[indexPath.row]
             contactDetailVC.contact = contact
         }
     }
-    */
+    
     
    
     
