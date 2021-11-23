@@ -20,7 +20,8 @@ class ContactDetailViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     
-
+    @IBOutlet weak var birthdayEmoji: UIImageView!
+    
     @IBOutlet weak var viewOnMapBtn: UIButton!
     
     
@@ -57,26 +58,42 @@ class ContactDetailViewController: UIViewController {
         emailLabel.text = contact.email
         phoneLabel.text = contact.phone
         cityLabel.text = contact.location.city
-        
-        
+    
     }
+    
     
     
     
     func contactBirthday() {
-        let birthday = contact?.dob.date.prefix(10)
+        
+        let contactBirthday = contact!.dob.date.prefix(10)
+        let formattedBDay = contactBirthday.suffix(5)
 
-        var currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM"
+            
+        let currentDate = Date()
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "MM-dd"
         
         print("Todays date: " + dateFormatter.string(from: currentDate))
-        print("Persons birthday: " + birthday!)
+        print("Persons birthday: " + formattedBDay)
         
-        let birthdayCake = "🎂" // "\u{1F382}"
+        //let birthdayCake = "🎂" // "\u{1F382}"
+        
+        if dateFormatter.string(from: currentDate) == formattedBDay {
+            print("BIRTHDAY!!!")
+            birthdayEmoji.alpha = 1
+        }
+        
         
     }
+ 
+   
+
+    
+    
     
     @objc func mapBtn() {
         let story = UIStoryboard(name: "Main", bundle: nil)
